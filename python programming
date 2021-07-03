@@ -79,6 +79,7 @@ localhost:~# python abc.py
 ('result is', True)
 ('Given list is ', [27, 28, 29, 30, 31])
 ('result is', False)
+
 4. Given a string (e.g. “I want to hear from you. What do you think of this basic python exercise.”) count the occurrence of a substring (e.g. “you”) in it.
 #!/usr/bin/python3
  
