@@ -1,0 +1,144 @@
+                 
+
+GE- 4 OPEN SOURCE SOFTWARE
+                   ASSIGNMENT
+
+TOPIC: Python programming
+
+Name: Rupanjoli Bora
+Department: BA Economics Honours
+Roll no: 202181012
+
+
+
+1. Calculate the product of two integers. If the product is greater than 1200, then return their sum else return their difference.
+def sum_or_difference(num1, num2):
+ 
+    product = num1 + num2
+ 
+    if product > 1200:
+        return product
+    else:
+ 
+        return num1 - num2
+ 
+result = sum_or_difference(500, 300)
+print("The result is", result)
+ 
+result = sum_or_difference(1000, 200)
+print("The result is", result)
+
+output:
+localhost:~# python abc.py
+('The result is', 200)
+('The result is', 800)
+
+2. Use a list/tuple containing 10 values. Iterate through the values and calculate the sum of the previous value and the current value.
+def sumNum(num):
+  previousNum = 2
+  for i in range(num):
+    sum = previousNum + i
+    print("Current Number", i, "Previous Number ", previousNum," Sum: ", sum)
+ 
+ 
+print("Printing current and previous number sum in a given list(10)")
+sumNum(10)
+
+output:
+localhost:~# python abc.py
+Printing current and previous number sum in a given list(10)
+('Current Number', 0, 'Previous Number ', 2, ' Sum: ', 2)
+('Current Number', 1, 'Previous Number ', 2, ' Sum: ', 3)
+('Current Number', 2, 'Previous Number ', 2, ' Sum: ', 4)
+('Current Number', 3, 'Previous Number ', 2, ' Sum: ', 5)
+('Current Number', 4, 'Previous Number ', 2, ' Sum: ', 6)
+('Current Number', 5, 'Previous Number ', 2, ' Sum: ', 7)
+('Current Number', 6, 'Previous Number ', 2, ' Sum: ', 8)
+('Current Number', 7, 'Previous Number ', 2, ' Sum: ', 9)
+('Current Number', 8, 'Previous Number ', 2, ' Sum: ', 10)
+('Current Number', 9, 'Previous Number ', 2, ' Sum: ', 11)
+
+3. In a list of numbers, verify if the first and the last values are equal and return true/false accordingly. Create new lists during runtime to store odd and even numbers separately from the parent list.
+def isFirst_And_Last_number_equal(numberList):
+    print("Given list is ", numberList)
+    firstElement = numberList[0]
+    lastElement = numberList[-1]
+    if (firstElement == lastElement):
+        return True
+    else:
+        return False
+ 
+numList = [30, 40, 50, 80, 30]
+print("result is", isFirst_And_Last_number_equal(numList))
+ 
+numList = [27, 28, 29, 30, 31]
+print("result is", isFirst_And_Last_number_equal(numList))
+
+output:
+localhost:~# python abc.py
+('Given list is ', [30, 40, 50, 80, 30])
+('result is', True)
+('Given list is ', [27, 28, 29, 30, 31])
+('result is', False)
+4. Given a string (e.g. “I want to hear from you. What do you think of this basic python exercise.”) count the occurrence of a substring (e.g. “you”) in it.
+#!/usr/bin/python3
+ 
+str = "Python programming is very useful."
+sub = 'is'
+print "str.count 'is' : ", str.count(sub)
+ 
+str = "how are you? and when you are coming back to our hometown?"
+sub = 'you'
+print "str.count 'you' : ", str.count(sub)
+ 
+ 
+str = "red blue green, red red blue, red red red."
+sub = 'red'
+print "str.count 'red' : ", str.count(sub)
+ 
+str = "hope you are doing good"
+sub = 'hope'
+print "str.count 'hope' : ", str.count(sub)
+
+output:
+localhost:~# python abc.py
+str.count 'is' :  1
+str.count 'you' :  2
+str.count 'red' :  6
+str.count 'hope' :  1
+
+5. Write code to reverse a string. Check if the new string is a palindrome. Next, insert space character (“ “) after every letter in the new string.
+def reverse_string(str):
+    str1 = ""
+    for i in str:
+        str1 = i + str1
+    return str1
+str = "hannah"
+print("The original string is: ",str)
+print("The reverse string is: ", reverse_string(str))
+ 
+ 
+ 
+def isPalindrome(s):
+    return s == s[::-1]
+ 
+s = "hannah"
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
+ 
+ 
+ 
+str="hannah"
+string_revised=" ".join(str)
+print string_revised
+
+output:
+localhost:~# python abc.py
+('The original string is: ', 'hannah')
+('The reverse string is: ', 'hannah')
+Yes
+h a n n a h
